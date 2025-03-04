@@ -1,0 +1,32 @@
+import random
+
+def twostep():
+    """Creates a two-step linear equation using only integers. Intended for low skill level math students."""
+
+
+    # Randomly generate integer coefficients and constants
+    m = random.randint(1,10) # Coefficient of x (not zero)
+    x = random.randint(-10,10) # Random integer solutions for x
+    b = random.randint(-20,20) # Constant term
+
+    #Create the calculation for y
+    y = m * x + b
+
+    #Create the equation string
+    equation = f"{m}x + {b} = {y}"
+
+    #Explanation of the solution
+    explanation = (
+        f"To solve for x:\n"
+        f"1. Perform the inverse operation of {b} on both sides: {m}x = {y-b}\n"
+        f"2. Divide by {m} on both sides: x = {x}"
+    )
+    return equation, explanation     
+
+
+
+
+# Generate and display a random equation
+eq, solution = twostep()
+print ("Equation:", eq)
+print (solution)

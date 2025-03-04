@@ -1,0 +1,24 @@
+
+import random
+
+def factorquadratic():
+        m = random.randint(-12,12)
+        n = random.randint(-12,12)
+        a = 1 # Coefficient of x^2, could make it larger for complexity
+        b = m + n # Coefficient of b
+        c = m * n # constant term
+
+        explanation = (
+                f"To solve for x:\n"
+                f"1. Find two numbers (m,n) that multiply to {c}"
+                f"2. Then find the pair of numbers from step one that also combine to create {b}"
+                f"3. Use these two numbers to convert to factored form: (x-m)(x-n) = 0"
+        )
+        #create equation
+        equation = f"{a}x^2 + {b}x + {c} = 0"
+        return equation, m, n #gives the equation string and the m and n values
+    
+
+eq, m, n = factorquadratic()
+print("Equation:", eq)
+print(f"(x-{m})(x-{n}) = 0")

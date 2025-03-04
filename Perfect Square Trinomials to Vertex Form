@@ -1,0 +1,30 @@
+import random
+
+def compthesquare():
+    #Work a bit backwards and create the vertex first
+    h = random.randint(-6,6) #x value of the vertex
+    k = random.randint(-10,10) #y value of the vertex
+
+    #expand vertex
+    b = -2 * h # b value of the standard form
+    c = h ** 2 # c value of the standard form
+
+    #standard form equation
+    stform = f"x^2+{b}x+{c} = 0"
+
+    #vertex form equation
+    verform = f"(x-{h})^2+{k} = 0"
+
+    solution = (
+        f"To solve for x:\n"
+        f"1. Set the equation equal to zero"
+        f"2. Move {c} value to the other side"
+        f"3. Half {b}, square it, and add it to both sides"
+        f"4. Factor the left side and simplify the right side"
+        f"5. Move the new constant back to the left side"
+    )
+    return stform, verform, solution
+
+eq, ver, solution = compthesquare()
+print("Standard Form:", eq)
+print("Vertex Form:", ver)
